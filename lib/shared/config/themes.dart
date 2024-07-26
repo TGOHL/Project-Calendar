@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:project_calendar/shared/config/styles.dart';
 
 class AppThemes {
@@ -6,6 +7,7 @@ class AppThemes {
 
   static const Color main = Color(0xFF191D2B);
   static const Color mainLight = Color(0xFFD0D5DC);
+
   static const Color scaffold = Colors.white;
   static const Color scaffoldSecondary = Color(0xFFF6F7F8);
 
@@ -32,6 +34,7 @@ class AppThemes {
 
   static const Color checkColor = Color(0xFF5ECEB3);
   static const Color notificationColor = Color(0xFFDD4A4A);
+  static const Color borderColor = Color(0xFFE8EAEE);
 
   static const List<Color> mainGradient = [mainLight, main];
 
@@ -49,6 +52,17 @@ class AppThemes {
           titleLarge: AppStyles.kSB16TextStyle,
           titleMedium: AppStyles.kM14TextStyle,
           titleSmall: AppStyles.kSB12TextStyle,
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: main,
+            foregroundColor: scaffold,
+            disabledBackgroundColor: mainLight,
+            disabledForegroundColor: scaffold,
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.w)),
+            padding: EdgeInsets.symmetric(vertical: 16.h),
+            textStyle: AppStyles.kB16TextStyle,
+          ),
         ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       );
@@ -68,6 +82,17 @@ class AppThemes {
           titleLarge: AppStyles.kSB16TextStyle.copyWith(color: fontSecondary),
           titleMedium: AppStyles.kM14TextStyle.copyWith(color: fontSecondary),
           titleSmall: AppStyles.kSB12TextStyle.copyWith(color: fontSecondary),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: main,
+            foregroundColor: scaffold,
+            disabledBackgroundColor: mainLight,
+            disabledForegroundColor: scaffold,
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.w)),
+            padding: EdgeInsets.symmetric(vertical: 16.h),
+            textStyle: AppStyles.kB16TextStyle,
+          ),
         ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       );

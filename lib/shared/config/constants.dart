@@ -1,5 +1,3 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-//enum TABLE_SHOWN_SCREEN{STANDINGS,TEAMDETAILS}
-
-//const String NON_TAGED_IMAGE = 'Non Taged';
-
+double get contentPadding => 24.h;

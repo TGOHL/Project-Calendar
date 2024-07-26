@@ -5,6 +5,10 @@ abstract class LoginState {}
 
 class LoginInitial extends LoginState {}
 
+class LoginPasswordVisibilityChangedState extends LoginState {}
+
+class LoginButtonStateChangedState extends LoginState {}
+
 class LoginErrorState extends LoginState {
   final Exception error;
 
