@@ -7,12 +7,22 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
+      appBar: const CustomAppBar(),
+      bottomNavigationBar: const CustomBottomNavBar(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: const CustomFloatingButton(),
       body: BlocBuilder<HomeCubit, HomeState>(
-        buildWhen: (_, current) {
-          return true;
-        },
         builder: (context, state) {
-          return Center();
+          return PageView(
+            controller: homeCubit.pageController,
+            onPageChanged: homeCubit.setPageIndex,
+            children: const [
+              CategoriesScreen(),
+              ProjectsScreen(),
+              CalendarScreen(),
+              ProfileScreen(),
+            ],
+          );
         },
       ),
     );

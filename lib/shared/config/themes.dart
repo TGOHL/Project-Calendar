@@ -43,7 +43,7 @@ class AppThemes {
         scaffoldBackgroundColor: scaffold,
         primaryColor: main,
         appBarTheme: AppBarTheme.of(context).copyWith(
-          color: main,
+          color: scaffoldSecondary,
           titleTextStyle: AppStyles.kB16TextStyle,
           iconTheme: const IconThemeData(color: main),
         ),
@@ -73,7 +73,7 @@ class AppThemes {
         scaffoldBackgroundColor: scaffoldSecondary,
         primaryColor: mainLight,
         appBarTheme: AppBarTheme.of(context).copyWith(
-          color: main,
+          color: scaffoldSecondary,
           titleTextStyle: AppStyles.kB16TextStyle,
           iconTheme: const IconThemeData(color: main),
         ),
