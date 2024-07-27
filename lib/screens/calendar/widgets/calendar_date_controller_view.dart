@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:project_calendar/screens/calendar/cubit/calendar_cubit.dart';
+import 'package:project_calendar/screens/calendar/widgets/bottom_sheet/choose_date_sheet.dart';
 import 'package:project_calendar/shared/config/constants.dart';
 import 'package:project_calendar/shared/config/styles.dart';
 import 'package:project_calendar/shared/config/themes.dart';
@@ -23,7 +24,15 @@ class CalendarDateControllerView extends StatelessWidget {
               child: Row(
                 children: [
                   GestureDetector(
-                    onTap: calendarCubit.openCalendar,
+                    onTap: () {
+                      showModalBottomSheet(
+                        context: context,
+                        isScrollControlled: true,
+                        builder: (context) => BottomSheetCalendar(
+                          onContinue: calendarCubit.changeDate,
+                        ),
+                      );
+                    },
                     child: Container(
                       color: Colors.transparent,
                       child: Row(

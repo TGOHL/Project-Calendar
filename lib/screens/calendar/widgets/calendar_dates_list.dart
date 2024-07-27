@@ -29,7 +29,7 @@ class CalendarDatesList extends StatelessWidget {
               return DateTile(
                 date: date,
                 isSelected: calendarCubit.selectedDate.isSameDayAs(date),
-                onTap: () => calendarCubit.changeDate(date),
+                onTap: () => calendarCubit.changeDate(date, false),
               );
             },
           ),

@@ -13,7 +13,7 @@ part 'calendar_state.dart';
 class CalendarCubit extends Cubit<CalendarState> {
   late TabController tapbarController;
   ScrollController dateListController = ScrollController();
-  DateTime _selectedDate = DateTime(2024, 7, 27, 1, 58);
+  DateTime _selectedDate = DateTime.now();
   bool _initialized = false;
 
   double _scrollPostion = 0;
@@ -25,9 +25,12 @@ class CalendarCubit extends Cubit<CalendarState> {
 
   String get monthOfTheYear => DateFormat('MMMM yyyy ').format(selectedDate);
 
-  set setSelectedDate(DateTime date) {
+  void changeDate(DateTime date, [bool shouldScroll = true]) {
     if (_selectedDate.isSameDayAs(date)) return;
+    bool isMonthChanged = !_selectedDate.isSameMonthAs(date);
     _selectedDate = date;
+    if (shouldScroll) jumpToSelectedDay();
+    if (isMonthChanged) emit(CalendarMonthChangedState());
     emit(CalendarDateChangedState());
   }
 
@@ -49,8 +52,6 @@ class CalendarCubit extends Cubit<CalendarState> {
       tapbarController = controller;
     }
   }
-
-  void openCalendar() {}
 
   void scrollTillDay(int day) {
     double itemWidth = 48.w;
@@ -85,10 +86,6 @@ class CalendarCubit extends Cubit<CalendarState> {
   void scrollTillSelectedDay() => scrollTillDay(_selectedDate.day);
   void jumpToSelectedDay() => jumpToDay(_selectedDate.day);
 
-  void changeDate(DateTime date) {
-    setSelectedDate = date;
-  }
-
   void changeTap(int value) {
     if (_tapindex == value || value > 1) return;
     tapbarController.animateTo(value);
@@ -105,21 +102,9 @@ class CalendarCubit extends Cubit<CalendarState> {
     emit(CalendarTapChangedState());
   }
 
-  void nextDate() {
-    setSelectedDate = selectedDate.add(const Duration(days: 1));
-    if (_selectedDate.day == 1) {
-      jumpToPosition(0);
-      emit(CalendarMonthChangedState());
-    }
-  }
+  void nextDate() => changeDate(selectedDate.add(const Duration(days: 1)));
 
-  void previousDate() {
-    setSelectedDate = selectedDate.subtract(const Duration(days: 1));
-    if (_selectedDate.day == _selectedDate.maxDays) {
-      jumpToPosition(dateListController.position.maxScrollExtent);
-      emit(CalendarMonthChangedState());
-    }
-  }
+  void previousDate() => changeDate(selectedDate.subtract(const Duration(days: 1)));
 
   @override
   Future<void> close() {
