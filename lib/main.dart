@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
         builder: (context, child) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
+            scaffoldMessengerKey: scaffoldKey,
             title: 'Project Calendar',
             theme: AppThemes.lightTheme(context),
             darkTheme: AppThemes.darkTheme(context),

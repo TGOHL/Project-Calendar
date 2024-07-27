@@ -64,6 +64,19 @@ class AppThemes {
             textStyle: AppStyles.kB16TextStyle,
           ),
         ),
+        outlinedButtonTheme: OutlinedButtonThemeData(
+          style: OutlinedButton.styleFrom(
+            foregroundColor: main,
+            disabledBackgroundColor: mainLight,
+            disabledForegroundColor: scaffold,
+            side: BorderSide(color: main, width: 1.5.w),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8.w),
+            ),
+            padding: EdgeInsets.symmetric(vertical: 14.h),
+            textStyle: AppStyles.kB14TextStyle,
+          ),
+        ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       );
 
@@ -92,6 +105,19 @@ class AppThemes {
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.w)),
             padding: EdgeInsets.symmetric(vertical: 16.h),
             textStyle: AppStyles.kB16TextStyle,
+          ),
+        ),
+        outlinedButtonTheme: OutlinedButtonThemeData(
+          style: OutlinedButton.styleFrom(
+            foregroundColor: main,
+            disabledBackgroundColor: mainLight,
+            disabledForegroundColor: scaffold,
+            side: BorderSide(color: main, width: 1.5.w),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8.w),
+            ),
+            padding: EdgeInsets.symmetric(vertical: 14.h),
+            textStyle: AppStyles.kB14TextStyle,
           ),
         ),
         visualDensity: VisualDensity.adaptivePlatformDensity,

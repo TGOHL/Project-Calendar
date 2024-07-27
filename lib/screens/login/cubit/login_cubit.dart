@@ -40,7 +40,9 @@ class LoginCubit extends Cubit<LoginState> {
     return super.close();
   }
 
-  void onLogin() {}
+  void onLogin() {
+    emit(LoginSuccessfulState());
+  }
 
   void setLoginButtonState(String val) {
     final newState = emailController.text.isNotEmpty && passController.text.isNotEmpty;
@@ -48,5 +50,9 @@ class LoginCubit extends Cubit<LoginState> {
       _isLoginButtonEnabled = newState;
       emit(LoginButtonStateChangedState());
     }
+  }
+
+  void togglePasswordVisibility() {
+    setPasswordVisibility = !_isPasswordHidden;
   }
 }

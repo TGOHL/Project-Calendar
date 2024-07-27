@@ -8,6 +8,10 @@ class LoginView extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: BlocBuilder<LoginCubit, LoginState>(
+        buildWhen: (previous, current) {
+          if (current is LoginSuccessfulState) return false;
+          return true;
+        },
         builder: (context, state) {
           final cubit = context.read<LoginCubit>();
           return SafeArea(
@@ -31,6 +35,13 @@ class LoginView extends StatelessWidget {
                   hint: 'Enter password here',
                   obscureText: cubit.isPasswordHidden,
                   onChanged: cubit.setLoginButtonState,
+                  suffixIcon: IconButton(
+                    onPressed: cubit.togglePasswordVisibility,
+                    icon: Image.asset(
+                      cubit.isPasswordHidden ? AppAssets.eyeSlash : AppAssets.eye,
+                      height: 24.w,
+                    ),
+                  ),
                 ),
                 VerticalSpace(height: contentPadding),
                 Align(alignment: Alignment.centerRight, child: Text('Forgot Password ?', style: AppStyles.kSB14TextStyle)),

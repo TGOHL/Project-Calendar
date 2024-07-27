@@ -9,6 +9,8 @@ class LoginPasswordVisibilityChangedState extends LoginState {}
 
 class LoginButtonStateChangedState extends LoginState {}
 
+class LoginSuccessfulState extends LoginState {}
+
 class LoginErrorState extends LoginState {
   final Exception error;
 
