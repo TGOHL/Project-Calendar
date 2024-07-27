@@ -14,7 +14,11 @@ class HomeCubit extends Cubit<HomeState> {
   set setPage(HomePageType p) {
     if (_page == p) return;
     _page = p;
-    pageController.jumpToPage(p.index);
+    pageController.animateToPage(
+      p.index,
+      duration: const Duration(milliseconds: 350),
+      curve: Curves.easeInOut,
+    );
     emit(HomePageChangedState());
   }
 

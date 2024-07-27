@@ -6,11 +6,11 @@ part 'projects_state.dart';
 
 class ProjectsCubit extends Cubit<ProjectsState> {
   final List<ProductivityBarModel> _productivityBars = [
-    ProductivityBarModel(date: DateTime(2024, 1), percentage: 0),
-    ProductivityBarModel(date: DateTime(2024, 2), percentage: 100),
+    ProductivityBarModel(date: DateTime(2024, 1), percentage: 52),
+    ProductivityBarModel(date: DateTime(2024, 2), percentage: 70),
     ProductivityBarModel(date: DateTime(2024, 3), percentage: 40),
     ProductivityBarModel(date: DateTime(2024, 4), percentage: 56),
-    ProductivityBarModel(date: DateTime(2024, 5), percentage: 66),
+    ProductivityBarModel(date: DateTime(2024, 5), percentage: 88),
     ProductivityBarModel(date: DateTime(2024, 6), percentage: 68),
   ];
 

@@ -19,4 +19,5 @@ class AppAssets {
   static const personDark = '$_kIconsPath/person_dark.png';
   static const search = '$_kIconsPath/search.png';
   static const verify = '$_kIconsPath/verify.png';
+  static const tickSquare = '$_kIconsPath/tick_square.png';
 }
