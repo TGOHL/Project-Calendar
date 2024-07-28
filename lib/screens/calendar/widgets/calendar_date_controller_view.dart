@@ -7,7 +7,7 @@ import 'package:project_calendar/shared/config/constants.dart';
 import 'package:project_calendar/shared/config/styles.dart';
 import 'package:project_calendar/shared/config/themes.dart';
 import 'package:project_calendar/shared/helpers/get_it.dart';
-import 'package:project_calendar/shared/widgets/arrow_button.dart';
+import 'package:project_calendar/shared/widgets/buttons/arrow_button.dart';
 
 class CalendarDateControllerView extends StatelessWidget {
   const CalendarDateControllerView({super.key});

@@ -1,5 +1,6 @@
 class AppAssets {
   static const _kIconsPath = 'assets/icons';
+  static const _kImagesPath = 'assets/images';
 
   static const appleLogo = '$_kIconsPath/apple.png';
   static const calendarDark = '$_kIconsPath/calendar_dark.png';
@@ -20,4 +21,6 @@ class AppAssets {
   static const search = '$_kIconsPath/search.png';
   static const verify = '$_kIconsPath/verify.png';
   static const tickSquare = '$_kIconsPath/tick_square.png';
+
+  static const comingSoon = '$_kImagesPath/coming_soon.jpg';
 }

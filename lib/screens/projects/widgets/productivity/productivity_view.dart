@@ -8,7 +8,7 @@ import 'package:project_calendar/shared/config/styles.dart';
 import 'package:project_calendar/shared/config/themes.dart';
 import 'package:project_calendar/shared/helpers/get_it.dart';
 import 'package:project_calendar/shared/models/app/productivity_bar.dart';
-import 'package:project_calendar/shared/widgets/horizontal_space.dart';
+import 'package:project_calendar/shared/widgets/utils/horizontal_space.dart';
 
 class ProductivityView extends StatelessWidget {
   final double maxBaHeight;

@@ -4,6 +4,7 @@ import 'package:project_calendar/screens/calendar/cubit/calendar_cubit.dart';
 import 'package:project_calendar/screens/calendar/widgets/tiles/schedule_tile.dart';
 import 'package:project_calendar/screens/calendar/widgets/tiles/task_tile.dart';
 import 'package:project_calendar/shared/config/constants.dart';
+import 'package:project_calendar/shared/config/styles.dart';
 import 'package:project_calendar/shared/helpers/get_it.dart';
 
 class ScheduleTaskTabView extends StatelessWidget {
@@ -24,13 +25,21 @@ class ScheduleTaskTabView extends StatelessWidget {
                 return ScheduleTile(dateTime: calendarCubit.selectedDate.copyWith(hour: index, minute: 0));
               },
             ),
-            ListView.builder(
-              itemCount: calendarCubit.taskList.length,
-              padding: EdgeInsets.all(contentPadding),
-              itemBuilder: (context, index) {
-                return TaskTile(taskModel: calendarCubit.taskList[index]);
-              },
-            ),
+            if (calendarCubit.taskList.isNotEmpty)
+              ListView.builder(
+                itemCount: calendarCubit.taskList.length,
+                padding: EdgeInsets.all(contentPadding),
+                itemBuilder: (context, index) {
+                  return TaskTile(taskModel: calendarCubit.taskList[index]);
+                },
+              )
+            else
+              Center(
+                child: Text(
+                  'No Tasks Assigned',
+                  style: AppStyles.kM14TextStyle,
+                ),
+              ),
           ],
         );
       },

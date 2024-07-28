@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:project_calendar/shared/config/assets.dart';
 
 part 'categories_view.dart';
 

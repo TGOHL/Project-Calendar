@@ -8,7 +8,7 @@ import 'package:project_calendar/shared/helpers/initialization_helper.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
+  await ScreenUtil.ensureScreenSize();
   await InitializationHelper.initialize();
   runApp(const MyApp());
 }

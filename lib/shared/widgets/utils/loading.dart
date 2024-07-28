@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../config/themes.dart';
+import '../../config/themes.dart';
 
 class Loading extends StatelessWidget {
   const Loading({super.key});

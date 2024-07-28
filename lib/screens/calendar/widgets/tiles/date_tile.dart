@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 import 'package:project_calendar/shared/config/styles.dart';
 import 'package:project_calendar/shared/config/themes.dart';
-import 'package:project_calendar/shared/widgets/vertical_space.dart';
+import 'package:project_calendar/shared/widgets/utils/vertical_space.dart';
 
 class DateTile extends StatelessWidget {
   final DateTime date;

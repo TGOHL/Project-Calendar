@@ -8,9 +8,9 @@ import 'package:project_calendar/shared/config/themes.dart';
 import 'package:project_calendar/shared/helpers/get_it.dart';
 import 'package:project_calendar/shared/models/app/task.dart';
 import 'package:project_calendar/shared/utils/extention/datetime.dart';
-import 'package:project_calendar/shared/widgets/horizontal_space.dart';
-import 'package:project_calendar/shared/widgets/line.dart';
-import 'package:project_calendar/shared/widgets/vertical_space.dart';
+import 'package:project_calendar/shared/widgets/utils/horizontal_space.dart';
+import 'package:project_calendar/shared/widgets/utils/line.dart';
+import 'package:project_calendar/shared/widgets/utils/vertical_space.dart';
 
 class ScheduleTile extends StatelessWidget {
   final DateTime dateTime;

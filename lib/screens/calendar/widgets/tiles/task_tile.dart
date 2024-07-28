@@ -5,8 +5,8 @@ import 'package:project_calendar/shared/config/assets.dart';
 import 'package:project_calendar/shared/config/styles.dart';
 import 'package:project_calendar/shared/config/themes.dart';
 import 'package:project_calendar/shared/models/app/task.dart';
-import 'package:project_calendar/shared/widgets/horizontal_space.dart';
-import 'package:project_calendar/shared/widgets/vertical_space.dart';
+import 'package:project_calendar/shared/widgets/utils/horizontal_space.dart';
+import 'package:project_calendar/shared/widgets/utils/vertical_space.dart';
 
 class TaskTile extends StatelessWidget {
   final TaskModel taskModel;

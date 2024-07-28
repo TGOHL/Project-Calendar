@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:project_calendar/shared/config/styles.dart';
 import 'package:project_calendar/shared/config/themes.dart';
 import 'package:project_calendar/shared/helpers/get_it.dart';
-import 'package:project_calendar/shared/widgets/line.dart';
+import 'package:project_calendar/shared/widgets/utils/line.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class BottomSheetCalendar extends StatefulWidget {

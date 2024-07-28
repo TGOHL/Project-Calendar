@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:project_calendar/shared/config/styles.dart';
 import 'package:project_calendar/shared/enums/project_state.dart';
-import 'package:project_calendar/shared/widgets/vertical_space.dart';
+import 'package:project_calendar/shared/widgets/utils/vertical_space.dart';
 
 class ProjectsCount extends StatelessWidget {
   final ProjectState projectState;

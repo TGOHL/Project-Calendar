@@ -5,7 +5,7 @@ import 'package:project_calendar/screens/projects/widgets/productivity/productiv
 import 'package:project_calendar/shared/config/styles.dart';
 import 'package:project_calendar/shared/config/themes.dart';
 import 'package:project_calendar/shared/models/app/productivity_bar.dart';
-import 'package:project_calendar/shared/widgets/vertical_space.dart';
+import 'package:project_calendar/shared/widgets/utils/vertical_space.dart';
 
 class ProductivityBar extends StatelessWidget {
   final ProductivityBarModel productivityBarModel;

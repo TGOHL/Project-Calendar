@@ -6,7 +6,7 @@ import 'package:project_calendar/screens/calendar/widgets/tiles/date_tile.dart';
 import 'package:project_calendar/shared/config/constants.dart';
 import 'package:project_calendar/shared/helpers/get_it.dart';
 import 'package:project_calendar/shared/utils/extention/datetime.dart';
-import 'package:project_calendar/shared/widgets/horizontal_space.dart';
+import 'package:project_calendar/shared/widgets/utils/horizontal_space.dart';
 
 class CalendarDatesList extends StatelessWidget {
   const CalendarDatesList({super.key});

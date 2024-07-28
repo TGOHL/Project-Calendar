@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:project_calendar/screens/home/cubit/home_cubit.dart';
 import 'package:project_calendar/shared/enums/home_page_type.dart';
 import 'package:project_calendar/shared/helpers/get_it.dart';
-import 'package:project_calendar/shared/widgets/horizontal_space.dart';
+import 'package:project_calendar/shared/widgets/utils/horizontal_space.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   const CustomBottomNavBar({super.key});

@@ -40,7 +40,7 @@ class CalendarCubit extends Cubit<CalendarState> {
     if (_initialized) {
       jumpToPosition(_scrollPostion);
     } else {
-      scrollTillSelectedDay();
+      jumpToSelectedDay();
       dateListController.addListener(onDateListScroll);
       tapbarController.animation?.addListener(onTabViewScroll);
       _initialized = true;
@@ -51,19 +51,6 @@ class CalendarCubit extends Cubit<CalendarState> {
     if (!_initialized) {
       tapbarController = controller;
     }
-  }
-
-  void scrollTillDay(int day) {
-    double itemWidth = 48.w;
-    double space = 8.w;
-    int index = day - 1;
-    double maxScroll = (itemWidth + space) * (selectedDate.maxDays - 5);
-    double position = min((itemWidth + space) * index, maxScroll);
-    dateListController.animateTo(
-      position,
-      duration: Duration(milliseconds: 1000 * position ~/ maxScroll),
-      curve: Curves.easeInOut,
-    );
   }
 
   void jumpToDay(int day) {
@@ -83,7 +70,6 @@ class CalendarCubit extends Cubit<CalendarState> {
     dateListController.jumpTo(position);
   }
 
-  void scrollTillSelectedDay() => scrollTillDay(_selectedDate.day);
   void jumpToSelectedDay() => jumpToDay(_selectedDate.day);
 
   void changeTap(int value) {

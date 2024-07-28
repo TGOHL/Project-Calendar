@@ -9,9 +9,9 @@ import 'package:project_calendar/shared/config/styles.dart';
 import 'package:project_calendar/shared/config/themes.dart';
 import 'package:project_calendar/shared/enums/social_provider.dart';
 import 'package:project_calendar/shared/helpers/toast_helper.dart';
-import 'package:project_calendar/shared/widgets/custom_text_field.dart';
-import 'package:project_calendar/shared/widgets/social_login_button.dart';
-import 'package:project_calendar/shared/widgets/vertical_space.dart';
+import 'package:project_calendar/shared/widgets/textfield/custom_text_field.dart';
+import 'package:project_calendar/shared/widgets/buttons/social_login_button.dart';
+import 'package:project_calendar/shared/widgets/utils/vertical_space.dart';
 
 part 'login_view.dart';
 
